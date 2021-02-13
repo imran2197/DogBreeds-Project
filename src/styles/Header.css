@@ -1,0 +1,106 @@
+video {
+    object-fit: cover;
+    top: 0;
+    width: 100%;
+    height: 77%;
+    position: fixed;
+    z-index: -1;
+}
+
+.hero-container {
+    height: 68vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+}
+
+/* Quote */
+.hero-container>p {
+    margin-top: -80px;
+    color: #fff;
+    font-size: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: center;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+}
+
+.hero-btns {
+    margin-top: 340px;
+}
+
+#start {
+    color: #fff;
+}
+
+#start:hover {
+    color: #242424;
+}
+
+#link {
+    text-decoration: none;
+}
+
+.hero-btns .btn {
+    margin-bottom: 100px;
+    width: 450px;
+    /* height: 100px; */
+}
+
+@media screen and (max-width: 960px) {
+    video {
+        object-fit: cover;
+        width: 100%;
+        height: 50%;
+        margin-top: 0px;
+        position: fixed;
+        z-index: -1;
+    }
+
+    #start {
+        font-size: 25px;
+    }
+
+    .hero-container {
+        /* background: url('/images/img-home.jpg') center center/cover no-repeat; */
+        height: 300px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+        object-fit: contain;
+    }
+
+    /* Quote */
+    .hero-container>p {
+        margin-top: 5px;
+        color: #fff;
+        font-size: 26px;
+        margin-left: 50px;
+        margin-right: 50px;
+        text-align: center;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+            "Lucida Sans", Arial, sans-serif;
+    }
+
+    .hero-btns {
+        margin-top: 150px;
+    }
+
+    .hero-btns .btn {
+        margin: 6px;
+        width: 250px;
+        font-size: 50px;
+    }
+
+    .start {
+        font-size: 25px;
+    }
+}
