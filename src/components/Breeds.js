@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from 'react'
 import "../styles/BreedCards.css";
-import HomeCards from "./cards/BreedCards";
+import BreedCards from "./cards/BreedCards";
 import Footer from "./Footer";
 
 const Home = () => {
     const [names,setNames] = useState([]);
+    const [search, setSearch] = useState("");
+
     useEffect(() => {
         fetch("http://localhost:9999/breeds")
         .then(res => res.json())
@@ -17,11 +19,23 @@ const Home = () => {
         <>
             <div className="Breeds">
                 <p className="h1breeds">Dog Breeds</p>
+                <div className="searchBar">
+                    <i id="searchIcon" className="fa fa-search searchIcon"></i>
+                    <input className="searchInputField" type="text" placeholder="Search Breeds" onChange={e => setSearch(e.target.value)} />
+                </div>
                 <div className="breeds__container">
                     <div className="breeds__wrapper">
                         {
-                            names.map((item,idx) => (
-                                <HomeCards key={idx}
+                            names
+                            .filter(value => {
+                                if (search === "") {
+                                  return value;
+                                } else {
+                                  return value.name.toLowerCase().match(search);
+                                }
+                              })
+                            .map((item,idx) => (
+                                <BreedCards key={idx}
                                     link={item.link}
                                     title={item.type}
                                     imgSource={item.source}
