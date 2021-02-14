@@ -18,10 +18,9 @@ const Home = () => {
     return(
         <>
             <div className="Breeds">
-                <p className="h1breeds">Dog Breeds</p>
                 <div className="searchBar">
                     <i id="searchIcon" className="fa fa-search searchIcon"></i>
-                    <input className="searchInputField" type="text" placeholder="Search Breeds" onChange={e => setSearch(e.target.value)} />
+                    <input className="searchInputField" type="text" placeholder="Search Dog Breeds" onChange={e => setSearch(e.target.value)} />
                 </div>
                 <div className="breeds__container">
                     <div className="breeds__wrapper">
