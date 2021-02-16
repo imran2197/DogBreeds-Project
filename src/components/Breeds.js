@@ -30,7 +30,7 @@ const Home = () => {
                                 if (search === "") {
                                   return value;
                                 } else {
-                                  return value.name.toLowerCase().match(search);
+                                  return value.name.toLowerCase().startsWith(search.toLocaleLowerCase());
                                 }
                               })
                             .map((item,idx) => (
